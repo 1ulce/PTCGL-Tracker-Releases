@@ -1,78 +1,81 @@
+[English](README.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Bahasa Indonesia](README.id.md) | [Italiano](README.it.md) | [한국어](README.ko.md) | [Português](README.pt.md) | [Español](README.es.md) | [ภาษาไทย](README.th.md)
+
 # PTCGL Tracker
 
-ポケモンカードゲームライブ（PTCGL）の対戦後に表示されるバトルログを自動で保存するツールです。
+A tool that automatically saves battle logs displayed after matches in Pokémon Trading Card Game Live (PTCGL).
 
-## ダウンロード
+## Download
 
-[最新版をダウンロード](https://github.com/1ulce/PTCGL-Tracker-Releases/releases/latest)
+[Download the latest version](https://github.com/1ulce/PTCGL-Tracker-Releases/releases/latest)
 
-| OS | ファイル |
+| OS | File |
 |---|---|
 | Windows | `PTCGL Tracker.exe` |
 | macOS | `PTCGL Tracker.app.zip` |
 
-## インストール方法
+## Installation
 
 ### Windows
 
-1. `PTCGL Tracker.exe` をダウンロード
-2. 任意のフォルダに配置して実行
-3. システムトレイにアイコンが表示されれば起動完了
+1. Download `PTCGL Tracker.exe`
+2. Place it in any folder and run it
+3. Setup is complete when the icon appears in the system tray
 
 ### macOS
 
-1. `PTCGL Tracker.app.zip` をダウンロード
-2. 展開して `PTCGL Tracker.app` をアプリケーションフォルダに移動
-3. 初回起動時は右クリック → 「開く」で実行
+1. Download `PTCGL Tracker.app.zip`
+2. Extract it and move `PTCGL Tracker.app` to the Applications folder
+3. On first launch, right-click → "Open" to run it
 
-## 使い方
+## ⚠️ PTCGL Settings (Important)
 
-1. PTCGL Tracker を起動（システムトレイに常駐）
-2. PTCGL でバトルを終了
-3. リザルト画面の「BATTLE LOG」ボタンが自動でクリックされる
-4. バトルログが `~/PTCGLLogs/` に自動保存される
+To make replay analysis work correctly, please configure the following settings in PTCGL.
 
-## クラウドにアップロード
-PTCGToolsにアカウントを作成し、ログインをすると、[PTCGL Replayerのwebサイト](https://replay.ptcgtools.com)であなたの対戦ログやデッキが管理できます。
+![PTCGL Settings](ptcgl-settings.png)
 
-## ⚠️ PTCGLの設定（重要）
+### 1. Enable Window Mode
+`VIDEO OPTIONS` → **Check "WINDOWED"**
 
-リプレイ分析を正しく機能させるために、PTCGL側で以下の設定を行ってください。
+Required for the tracker to access log files.
 
-### 1. ウィンドウモードを有効化
-`VIDEO OPTIONS` → **「WINDOWED」にチェック**
+### 2. Set Language to English
+`LANGUAGE` → **Select "ENGLISH"**
 
-トラッカーがログファイルにアクセスするために必須です。
+Currently, only English logs are supported for replay analysis.
 
-### 2. 言語を英語に設定
-`LANGUAGE` → **「ENGLISH」を選択**
+### 3. Show Card IDs
+`BATTLE LOG SETTINGS` → **Uncheck "HIDE CARD IDS FROM EXPORT"**
 
-現在、英語ログのみがリプレイ分析に対応しています。
+Card images will not display in logs without card IDs.
 
-### 3. カードIDを表示する
-`BATTLE LOG SETTINGS` → **「HIDE CARD IDS FROM EXPORT」のチェックを外す**
+## Usage
 
-カードIDがないとログにカード画像が表示されません。
+1. Launch PTCGL Tracker (it runs in the system tray)
+2. Finish a battle in PTCGL
+3. The "BATTLE LOG" button on the result screen is automatically clicked
+4. Battle logs are saved automatically to `~/PTCGLLogs/`
 
-## 自動アップデート
+## Cloud Upload
+Create an account on PTCGTools and log in to manage your battle logs and decks on the [PTCGL Replayer website](https://replay.ptcgtools.com).
 
-新しいバージョンがリリースされると、アプリ起動時に通知が表示されます。
-トレイメニューから簡単にアップデートできます。
+## Auto Update
 
-## 対応言語
+When a new version is released, a notification will appear at app launch.
+You can easily update from the tray menu.
+
+## Supported Languages
 
 🇯🇵 日本語 | 🇺🇸 English | 🇨🇳 简体中文 | 🇫🇷 Français | 🇩🇪 Deutsch | 🇮🇩 Bahasa Indonesia | 🇮🇹 Italiano | 🇰🇷 한국어 | 🇧🇷 Português | 🇪🇸 Español | 🇹🇭 ภาษาไทย
 
-## 動作環境
+## System Requirements
 
 - Windows 10/11
 - macOS 12+
 
-## ライセンス
+## License
 
 MIT License
 
-## 問題報告
+## Report Issues
 
-バグや要望は [Issues](https://github.com/1ulce/PTCGL-Tracker-Releases/issues) からお願いします。
-
+Please report bugs and requests via [Issues](https://github.com/1ulce/PTCGL-Tracker-Releases/issues).
